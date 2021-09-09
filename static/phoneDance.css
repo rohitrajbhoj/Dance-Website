@@ -1,0 +1,13 @@
+#navbar {
+    flex-direction: column;
+    height: 105px;
+}
+
+#card_section {
+    display: flex;
+    flex-direction: column;
+}
+
+#sponser_section {
+    flex-wrap: column;
+}

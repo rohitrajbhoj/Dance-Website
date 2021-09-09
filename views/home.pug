@@ -1,0 +1,72 @@
+extends base.pug
+
+block scripts
+    script(src="/static/index.js") 
+
+block style
+    style
+        include ../static/style.css
+        //- link(rel='stylesheet' media='screen and (max-width:1343px)' href='../static/phoneDance.css')
+
+block content
+    section#intro_section
+      div| Welcome to Evolve Dance Studio.
+      div.small| Evolving your passion for Dance!
+
+    section#mission_section
+      h2 Our Mission 
+      section#card_section
+        div.card
+          h3 Dance Perfection
+          div.card_box
+            div.card_img#img1
+              img(src="/static/card_img11.png", alt="")
+            div.card_container
+              p Learn Indian Classsical.
+
+        div.card
+          h3 Dance the way you like
+          div.card_box
+            div.card_img#img2
+              img(src="/static/card_img22.png", alt="")
+            div.card_container
+              p Learn Western Classsical.
+
+        div.card
+          h3 Expert Teaching
+          div.card_box
+            div.card_img#img3
+              img(src="/static/card_img33.png", alt="")
+            div.card_container
+              p Learn Hip-Hop.
+
+    section#contact_section
+      h2.h-primary Contact Us
+      #contact-box
+        form(action='/contact', method='post', class='myform')
+          .form-group
+            label(for='urname')|Name: 
+            input#urname(type='text' name='urname' placeholder='Enter your name')
+          br
+          .form-group
+            label(for='uremail')|E-mail: 
+            input#uremail(type='email' name='uremail' placeholder='Enter your e-mail')
+          br
+          .form-group
+            label(for='urnum')|Phone No.: 
+            input#urnum(type='phone' name='urnum' placeholder='Enter your phone number')
+          br
+          .form-group
+            label(for='message')|Message: 
+            textarea#message(name='message' rows='5' cols='20')  
+          .form-group
+            button.btn(type='submit')|Submit
+
+
+    section#sponser_section
+      h2 Our Sponsers
+      div.spn
+        img(src="/static/spons1.jpg", alt="")
+      div.spn
+        img(src="/static/spons.jpg", alt="")
+
