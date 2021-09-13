@@ -4,7 +4,7 @@ $ git config --global user.email "Enter your email"
 $ touch .gitignore /// it creates a empty file, where we can add folders/files that we dont want to push in repository
 $ git init /// Initialized empty Git repository
 $ git add . /// adding all files
-$ git commit -m "Initial Commit" /// its just an initial commit of our project
+$ git commit -m "Initial Commit" /// its just a commit of our project with message "Initial Commit"
 $ git status  /// to check the the status, wheather we have made changes in the files
 $ git remote add origin git@github.com:rohitrajbhoj/Dance-Website.git  /// this is the SSH link of the project repository
 $ git push origin master  /// now pushing it on repository
@@ -18,3 +18,8 @@ For private reposiory only
 4. It will generate a path on that key with .pub extension. (Eg, "/c/id_***.pub")
 5. Copy that path and paste it on git-bash with prefix "cat" (Eg, "cat /c/id_***.pub")
 6. It will generate the SSH key.
+
+Adding the updated files
+$ git add .
+$ git commit -m "Git-hub commands added"
+$ git push origin master  /// now pushing it on repository

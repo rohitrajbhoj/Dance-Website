@@ -4,7 +4,7 @@ const bodyparser = require('body-parser');
 // const fs = require('fs');
 const app = express(); // invoke express function
 const mongoose = require('mongoose');
-const port = 8050; // port to listen
+const port = process.env.PORT || 8050; // port to listen
 
 // mongoose Related stuff
 main().catch(err => console.log(err));
