@@ -5,12 +5,21 @@ const bodyparser = require('body-parser');
 const app = express(); // invoke express function
 const mongoose = require('mongoose');
 const port = process.env.PORT || 8050; // port to listen
+const DB = 'mongodb+srv://rajbhoj:120hit00@cluster0.pocye.mongodb.net/contactDance?retryWrites=true&w=majority';
 
 // mongoose Related stuff
-main().catch(err => console.log(err));
-async function main() {
-    await mongoose.connect('mongodb://localhost:27017/contactDance');
-}
+// main().catch(err => console.log(err));
+// async function main() {
+//     await mongoose.connect('mongodb://localhost:27017/contactDance');
+// }
+
+// mongoose.connect('mongodb+srv://rajbhoj:120hit00@cluster0.pocye.mongodb.net/contactDance?retryWrites=true&w=majority');
+////// Mongoose connection for online Database//////
+mongoose.connect(DB).then(() => {
+    console.log("Connection Sucessfull");
+}).catch((err) => console.log("Connection NOT Sucessfull"));
+
+/////////////////////////////
 const ContactSchema = new mongoose.Schema({
     urname: String,
     uremail: String,
